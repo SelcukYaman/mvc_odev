@@ -1,0 +1,38 @@
+﻿@model Ogrenci
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OgrenciBilgi</title>
+</head>
+<body>
+    <h1>Ogrenci Bilgi Ekranı</h1>
+ 
+    <h2>ViewData ile gelen öğrenci</h2>
+    <p>@(((Ogrenci)ViewData["Ogrenci"]).Ad)</p>
+    <p>@(((Ogrenci)ViewData["Ogrenci"]).Soyad)</p>
+    <p>@(((Ogrenci)ViewData["Ogrenci"]).Yas)</p>
+
+    <h3>ViewBag ile gelen öğrenci</h3>
+    <p>@ViewBag.ogretmen.Ad</p>
+    <p>@ViewBag.ogretmen.Soyad</p>
+    <p>@ViewBag.ogretmen.Yas</p>
+
+    <h3>Model ile gelen öğrenci</h3>
+    <p>@Model.Ad</p>
+    <p>@Model.Soyad</p>
+    <p>@Model.Yas</p>
+
+    <h2>Arraylist</h2>
+    <p>Capacity: @ViewBag.Capacity</p>
+    <p>Count: @ViewBag.Count</p>
+
+    <p>ViewData ile gelen veri:@ViewData["test"]</p> @*gelen veriyi gösterdik.*@
+    <p>ViewBag ile gelen veri:@ViewBag.deneme</p>
+</body>
+</html>
